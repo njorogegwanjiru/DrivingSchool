@@ -1,25 +1,22 @@
-package com.example.drivingschool.authentication
+package com.example.drivingschool.screens.authentication
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import com.example.drivingschool.components.AppButton
 import com.example.drivingschool.components.AppEditText
 import com.example.drivingschool.components.AppText
 import com.example.drivingschool.components.ImageFromRes
 import com.example.drivingschool.ui.theme.AppTheme
-import com.example.drivingschool.ui.theme.Theme
+
 
 @Composable
-fun LoginScreen(navController: NavController) {
+fun RegistrationScreen(navController: NavController) {
     Column(
         Modifier
             .fillMaxSize()
@@ -44,7 +41,7 @@ fun LoginScreen(navController: NavController) {
         )
 
         AppText(
-            text = "Login",
+            text = "Registration",
             style = AppTheme.typography.h2.copy(
                 color = AppTheme.colors.textPrimary,
                 fontWeight = FontWeight.Bold
@@ -64,7 +61,7 @@ fun LoginScreen(navController: NavController) {
 
         AppEditText(
             modifier = Modifier.fillMaxWidth(),
-            fieldPlaceholder = "Password",
+            fieldPlaceholder = "Admission Number",
             onValueChanged = {}
         )
 
@@ -72,16 +69,7 @@ fun LoginScreen(navController: NavController) {
 
         AppButton(
             modifier = Modifier.navigationBarsPadding(),
-            buttonText = "Login",
+            buttonText = "Register",
             onClick = {})
-    }
-}
-
-@Preview
-@Composable
-fun LoginPrev() {
-    val navController = rememberNavController()
-    Theme {
-        LoginScreen(navController = navController)
     }
 }

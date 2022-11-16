@@ -1,4 +1,4 @@
-package com.example.drivingschool.student
+package com.example.drivingschool.screens.authentication.student
 
 import android.widget.Space
 import androidx.compose.foundation.layout.*
