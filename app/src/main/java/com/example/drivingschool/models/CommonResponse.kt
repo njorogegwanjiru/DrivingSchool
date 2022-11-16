@@ -11,6 +11,6 @@ data class ErrorObject(
 )
 
 open class BaseCommonResponse(
-    val message: String = ""
+    val message: String? = ""
 ) : CommonResponse()
 
